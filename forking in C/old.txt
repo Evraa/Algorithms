@@ -1,0 +1,38 @@
+if (div == 0)
+	{
+		//Case 1
+		//I do know now that each children will be responsible for exactly one line, and the last (subtraction) wont have any
+		int i = 0;
+		for (i; i < numberOfLines; i++)
+		{
+			(part[i])[0] = arr[i];
+			
+		}
+		for (i; i < numberOfChildren; i++)
+			(part[i][0]) = 0;
+	}
+	else {
+		//Case 2
+		//if mod == 0 //no remaindes
+		//else
+		int mod = numberOfLines % numberOfChildren;
+		if (mod == 0)
+		{
+			int k = 0;
+			for (int i=0; i < numberOfLines; i++)
+			{
+				part[k] = arr[i];
+				k++;
+				if (k == numberOfChildren)
+					k = 0; //To wrap around
+			}
+		}
+		else {
+			for (int i = 0; i < numberOfChildren; i++)
+			{
+				part[i] = div;
+			}
+			for (int i = 0; i < mod; i++)
+				part[i] = part[i] + 1;
+		}
+	}
